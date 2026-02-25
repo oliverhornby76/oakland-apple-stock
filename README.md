@@ -38,3 +38,11 @@ The table stores one record per trading day for Apple (AAPL). Its purpose is to 
 The composite primary key on Symbol and TradeDate ensures that only one record exists for each stock on a given trading day, helping prevent duplicates and maintain data integrity.
 
 This table structure was chosen to keep the design simple by focusing on a single stock. It supports efficient data ingestion, straightforward querying, and reliable upsert logic. If the solution were expanded to include additional stocks, it could either introduce separate schemas and tables per stock or modify the existing table to accommodate multiple symbols.
+
+## Displaying the Data
+
+I was initially unfamiliar with building out an API endpoint to display the data from SQL. To support this and my development, I used AI for inspiration and guidance to assist with implementing the solution. The endpoint returns the previous 10 days of stock data and can be accessed [here](http://127.0.0.1:5000/prices/latest).
+
+This was created using Python along with the Flask library. The code which generates the endpoint can be found below with commentary.
+
+[Endpoint Solution](app.py)
