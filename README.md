@@ -36,3 +36,5 @@ The table stores one record per trading day for Apple (AAPL). Its purpose is to 
 | RecordProcessedOn | Processing timestamp | datetime2 | UTC timestamp of insert/upsert event |
 
 The composite primary key on Symbol and TradeDate ensures that only one record exists for each stock on a given trading day, helping prevent duplicates and maintain data integrity.
+
+This table structure was chosen to keep the design simple by focusing on a single stock. It supports efficient data ingestion, straightforward querying, and reliable upsert logic. If the solution were expanded to include additional stocks, it could either introduce separate schemas and tables per stock or modify the existing table to accommodate multiple symbols.
