@@ -45,6 +45,12 @@ This table structure was chosen to keep the design simple by focusing on a singl
 
 I was initially unfamiliar with building out an API endpoint to display the data from SQL. To support this and my development, I used AI for inspiration and guidance to assist with implementing the solution. The endpoint returns the previous 10 days of stock data and can be accessed [here](http://127.0.0.1:5000/prices/latest).
 
-This was created using Python along with the Flask library. The code which generates the endpoint can be found below with commentary.
+## Stored Stock Data
 
-[Endpoint Solution](app.py)
+After the process runs, the Apple stock data is stored in the DailyPrice table with each row representing one trading day and contains the high level metrics from that day.
+
+The table also captures processing metadata, which identifies the SQL user that executed process, and records the date and time the data was processed. This could be adapted to update the RecordProcessedOn value for any trading days where the data changes historically, ensuring the timestamp always reflects the most recent update for that record.
+
+Below is an example of the data stored in the table:
+
+![Stock Data](images/stock_results.png)
