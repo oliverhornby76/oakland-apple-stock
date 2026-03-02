@@ -5,8 +5,10 @@ A simple data engineering project for Oakland that retrieves Apple stock data fr
 
 This project demonstrates a basic data ingestion pipeline using Python to retrieve Apple stock data and load it into SQL Server. The steps taken are as follows:
 
-1. Retrieve Apple stock data from Alpha Vantage's API
+1. Retrieving Apple stock data from Alpha Vantage's API
 2. Storing the stock data inside a dedicated database within SQL Server
+3. Building an API endpoint to validate the retrieval of data
+4. Documenting the steps to support end-to-end deployment
 
 ## Table Layout
 
