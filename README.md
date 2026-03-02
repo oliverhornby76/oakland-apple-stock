@@ -65,12 +65,12 @@ Before starting, ensure your environment is configured with the following:
 
 These instructions guide you through executing the Python script to upsert the latest stock data into the DailyPrice table. This guide assumes the table has already been initialised and all prerequisites are met.
 
-1. Open Visual Studio Code
-2. Press Ctrl, Shift and P on your keyboard
-3. Select 'Python: Select Interpreter'
-4. Select the recommended option as shown in the screengrab below
+1. Open Visual Studio Code.
+2. Press Ctrl, Shift and P on your keyboard.
+3. Select 'Python: Select Interpreter'.
+4. Select the recommended option as shown in the screengrab below.
    ![Python Interpreter](images/python_interpreter.png)
-5. Run the Python script - it can be found [here](apple_stock_ingest.py)<br>
+5. Run the Python script - it can be found [here](apple_stock_ingest.py).<br>
    5a. If 'requests' or 'pyodbc' is not recognised (usually with a red underlined squiggle), run the following code(s) in         Bash:<br>
      <b>python -m pip install requests<br>
      python -m pip install pyodbc</b>
